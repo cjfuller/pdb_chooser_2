@@ -1,0 +1,23 @@
+.container {
+    padding-top: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-bottom: 16px;
+}

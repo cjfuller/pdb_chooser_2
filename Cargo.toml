@@ -1,0 +1,17 @@
+[package]
+name = "pdb-chooser"
+version = "2.0.0"
+edition = "2018"
+authors = ["Colin Fuller"]
+
+[dependencies]
+anyhow = "*"
+lazy_static = "*"
+log = "*"
+regex = "*"
+rocket = "0.5.0-rc.2"
+rocket_dyn_templates = {version = "0.1.0-rc.2", features = ["tera"]}
+serde_json = "*"
+serde = "*"
+sqlx = { version = "*", features = ["macros", "sqlite", "runtime-tokio-rustls"] }
+tokio = {version = "*", features = ["fs", "io-util", "macros", "net", "rt-multi-thread", "sync"]}

@@ -1,0 +1,11 @@
+[Unit]
+Description=PDB Chooser webapp
+
+[Service]
+WorkingDirectory=/pdb_chooser
+ExecStart=/pdb_chooser/start.sh
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>BIOL/BIEN 219 PDB selection lookup</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>BIOL/BIEN 219 PDB Selection Lookup</h1>
+      <div class="inner-container">
+        <form method="POST">
+          <div class="form-group">
+            <label for="mcgill_id">McGill ID</label>
+            {% if mcgill_id_validation_msg is defined %}
+            <input
+              type="text"
+              class="form-control is-invalid"
+              name="mcgill_id"
+              id="mcgill_id"
+              aria-describedby="mcgill_idHelp"
+              value="{{ mcgill_id }}"
+            />
+            <small id="mcgill_idHelp" class="invalid-feedback">
+              {{ mcgill_id_validation_msg }}
+            </small>
+            {% else %}
+            <input
+              type="text"
+              class="form-control"
+              name="mcgill_id"
+              id="mcgill_id"
+              aria-describedby="mcgill_idHelp"
+              value="{{ mcgill_id }}"
+            />
+            <small id="mcgill_idHelp" class="form-text text-muted">
+              9 digits
+            </small>
+            {% endif %}
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <a href="/{{ secret_key }}" class="check-link">Back to PDB Registration</a>
+      </div>
+    </div>
+  </body>
+</html>
